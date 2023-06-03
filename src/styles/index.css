@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  @apply mx-auto max-w-[80%] py-24 px-12
+}
+
+/* Title */
+.title {
+  @apply flex gap-4 justify-center pb-4
+}
+.title h1 {
+  @apply font-semibold text-2xl text-slate-950
+}
+.subtitle {
+  @apply text-sm text-gray-400 text-center pb-8
+}
+
+/* Search bar */
+.ToDoSearch {
+  @apply pb-8 max-w-md mx-auto
+}
+.label {
+  @apply mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white
+}
+
+.inputSearchContainer {
+  @apply relative
+}
+
+.svgContainer {
+  @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none
+}
+
+.svg {
+  @apply w-5 h-5 text-gray-500 dark:text-gray-400
+}
+
+.searchInput {
+  @apply block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+}
+
+.btnSearch {
+  @apply text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+}
+
+/* ToDo List */
+.toDo-list ul{
+  @apply flex flex-col items-center
+}
+
+/* ToDo Item */
+.toDoContainer {
+  @apply flex items-center w-[28rem]
+}
+.inputItemContainer {
+  @apply items-center h-5
+}
+.title-desc_div {
+  @apply ml-2 text-sm
+}
+
+/* Add buton */
+.btnContainer {
+  @apply absolute right-1/4
+}
+.btnIcon {
+  @apply h-6 w-6
+}
+.btnAdd {
+  @apply bg-indigo-500 h-8 w-8 rounded-full p-[0.2rem]
+}

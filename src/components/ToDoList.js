@@ -2,10 +2,10 @@ import React from "react";
 
 function ToDoList(props) {
   return (
-    <section>
+    <section className="toDo-list">
       <ul>{props.children}</ul>
     </section>
   );
 }
 
-export { ToDoList };
+export { ToDoList }
