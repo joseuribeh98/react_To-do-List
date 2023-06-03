@@ -3,26 +3,66 @@
 @tailwind utilities;
 
 .app {
-  @apply mx-auto max-w-[80%] py-24 px-12
+  @apply mx-auto max-w-[60%] py-24 px-12
 }
 
 /* Title */
+.titleContainer {
+  @apply flex flex-row justify-between h-full px-4 py-2 bg-slate-50 items-center rounded-xl drop-shadow-md
+}
+
+.lightGrayTitle {
+  @apply text-gray-300 !important
+}
+
 .title {
-  @apply flex gap-4 justify-center pb-4
+  @apply flex gap-0 justify-center flex-col
 }
-.title h1 {
-  @apply font-semibold text-2xl text-slate-950
+
+.title span {
+  @apply font-bold text-2xl text-slate-950
 }
+
+.subtitleContainer {
+  @apply flex flex-col m-0
+}
+
 .subtitle {
-  @apply text-sm text-gray-400 text-center pb-8
+  @apply text-sm text-gray-400 text-center
+}
+
+.profileImg {
+  @apply w-20 h-20 rounded-full
+}
+
+/* Counter */
+.counterContainer {
+  @apply p-0 m-0 flex flex-col text-center
+}
+
+.counterTitle {
+  @apply text-lg text-gray-800 font-bold
+}
+
+.counterText {
+  @apply text-xs text-gray-400
+}
+
+.counterEmphasis {
+  @apply font-semibold text-gray-600
+}
+
+.counterDate {
+  @apply text-sm text-gray-500 pb-2
 }
 
 /* Search bar */
 .ToDoSearch {
-  @apply pb-8 max-w-md mx-auto
+  @apply pb-8 max-w-full mx-auto pt-8
 }
+
 .label {
-  @apply mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white
+  @apply mb-2 text-sm font-medium text-gray-900 sr-only 
 }
 
 .inputSearchContainer {
@@ -34,40 +74,61 @@
 }
 
 .svg {
-  @apply w-5 h-5 text-gray-500 dark:text-gray-400
+  @apply w-5 h-5 text-gray-500 
 }
 
 .searchInput {
-  @apply block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+  @apply block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-indigo-500 drop-shadow-md
 }
 
 .btnSearch {
-  @apply text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+  @apply text-white absolute right-2.5 bottom-2.5 bg-indigo-500 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-8 py-2
+}
+
+/* Content */
+content {
+  @apply absolute
 }
 
 /* ToDo List */
-.toDo-list ul{
-  @apply flex flex-col items-center
+.toDo-list ul {
+  @apply flex flex-col items-center gap-4
 }
 
 /* ToDo Item */
 .toDoContainer {
-  @apply flex items-center w-[28rem]
+  @apply flex items-center w-full bg-slate-50 rounded-xl p-4 drop-shadow-md
 }
+
 .inputItemContainer {
   @apply items-center h-5
 }
+
 .title-desc_div {
-  @apply ml-2 text-sm
+  @apply pl-4 text-sm
+}
+
+.inputItem {
+  @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500
+}
+
+.titleItem {
+  @apply font-medium text-gray-900
+}
+
+.descItem {
+  @apply text-xs font-normal text-gray-500
 }
 
 /* Add buton */
 .btnContainer {
-  @apply absolute right-1/4
+  @apply fixed left-[50%] bottom-[80px] drop-shadow-md translate-x-1/2 translate-y-1/2
 }
+
 .btnIcon {
-  @apply h-6 w-6
+  @apply h-8 w-8
 }
+
 .btnAdd {
-  @apply bg-indigo-500 h-8 w-8 rounded-full p-[0.2rem]
+  @apply bg-indigo-500 h-12 w-12 rounded-full p-[0.2rem]
 }
