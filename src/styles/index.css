@@ -120,6 +120,13 @@ content {
   @apply text-xs font-normal text-gray-500
 }
 
+.deleteContainer {
+  @apply absolute top-[10px] right-[10px]
+}
+.deleteBtn {
+  @apply h-3 w-3 fill-rose-500
+}
+
 /* Add buton */
 .btnContainer {
   @apply fixed left-[50%] bottom-[80px] drop-shadow-md translate-x-1/2 translate-y-1/2
