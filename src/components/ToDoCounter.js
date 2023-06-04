@@ -1,6 +1,6 @@
 import React from "react";
 
-function ToDoCounter() {
+function ToDoCounter({ allTasks, completedTasks }) {
   const fecha = new Date().toLocaleString("es-ES", {
     weekday: "long",
     day: "numeric",
@@ -20,8 +20,8 @@ function ToDoCounter() {
       </div>
       <span className="counterDate">{fechaFormateada}</span>
       <h2 className="counterText">
-        Has completado <span className="counterEmphasis">2</span> de{" "}
-        <span className="counterEmphasis">3</span> tareas
+        Has completado <span className="counterEmphasis">{completedTasks}</span> de{" "}
+        <span className="counterEmphasis">{allTasks}</span> tareas
       </h2>
     </div>
   );

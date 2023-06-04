@@ -7,6 +7,7 @@ function ToDoItem(props) {
   const handleChange = (event) => {
     setIsChecked(event.target.checked);
     if (event.target.checked) {
+      ToDoItem.completed = true;
       alert("Complete");
     }
   };
@@ -14,7 +15,7 @@ function ToDoItem(props) {
     <li className="toDoContainer">
       <div className="inputItemContainer">
         <input
-          id="helper-checkbox"
+          id={props.id}
           aria-describedby="helper-checkbox-text"
           type="checkbox"
           value=""
@@ -25,7 +26,7 @@ function ToDoItem(props) {
       </div>
       <div className="title-desc_div">
         <label
-          htmlFor="helper-checkbox"
+          htmlFor={props.id}
           className="titleItem"
           style={
             isChecked ? { textDecoration: "line-through", opacity: 0.3 } : {}
@@ -53,15 +54,15 @@ function ToDoItem(props) {
           <g
             id="icons"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="ui-gambling-website-lined-icnos-casinoshunter"
               transform="translate(-2168.000000, -158.000000)"
               fill="#ef4444"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g id="1" transform="translate(1350.000000, 120.000000)">
                 <path
